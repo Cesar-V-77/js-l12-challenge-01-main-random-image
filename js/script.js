@@ -9,7 +9,6 @@ const getImage = async function () {
   console.log(images);
   selectRandomImage(images);
 };
-getImage();
 
 const selectRandomImage = function (images) {
   const randomIndex = Math.floor(Math.random() * images.length);
@@ -28,3 +27,7 @@ const displayImage = function (randomImage) {
   img.alt = `Image by: ${author} available at: ${imageUrl}`;
   imgDiv.classList.remove("hide");
 };
+
+button.addEventListener("click", function () {
+  getImage();
+});
